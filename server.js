@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
 });
 
 
-app.get('/api/google/*', (req, res) => {
+app.get('/maps/api/geocode/*', (req, res) => {
   let apiCall = req.url.slice('/maps/api/geocode/'.length)
   let apiReq = `https://maps.googleapis.com/${apiCall}`
   request.get(apiReq, (err, _, body) => {
