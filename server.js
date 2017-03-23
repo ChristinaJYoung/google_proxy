@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
 });
 
 
-app.get('/maps/', (req, res) => {
+app.get('/', (req, res) => {
   let apiCall = req.url.slice('/maps/api/'.length)
   let apiReq = `https://maps.googleapis.com/${apiCall}`
   request.get(apiReq, (err, _, body) => {
